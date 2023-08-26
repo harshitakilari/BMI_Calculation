@@ -1,0 +1,22 @@
+#calculation of BMI Calculation.
+class calculation:
+    def BMIcalculator(self, Height, Mass):
+        
+        for t1, t2 in [
+            (16, "severely underweight"),
+            (18.5, "underweight"),
+            (25, "normal"),
+            (30, "overweight"),
+            (35, "moderately obese"),
+            (float("inf"), "severely obese"),
+        ]:
+            if BMI <= t1:
+                print("Your BMI is", BMI, "and the person is :", t2)
+                break
+
+
+Height = float(input("Enter Height(m)"))
+Mass = int(input("Enter Weight(Kg)"))
+BMI = (Mass) / (Height * Height)
+obj = calculation()
+obj.BMIcalculator(Height, Mass)
